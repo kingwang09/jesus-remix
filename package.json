@@ -35,5 +35,6 @@
     "eslint": "^8.53.0",
     "typescript": "^5.2.2"
   },
-  "type": "module"
+  "type": "module",
+  "packageManager": "yarn@4.0.1"
 }
