@@ -8,6 +8,12 @@ import * as build from "./build/index.js";
 const app = express();
 app.use(express.static("public"));
 
+//interceptor
+app.use(function(req, resp, next){
+  console.log('express interceptor: ', req.url);
+  next();
+});
+
 // and your app is "just a request handler"
 app.all("*", createRequestHandler({ build }));
 
